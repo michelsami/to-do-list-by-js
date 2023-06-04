@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link href="./style.css" rel="stylesheet" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <!--start Title -->
+    <header id="main-header">
+      <h1 id="main-title">To do list application</h1>
+    </header>
+    <!--end Title -->
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-8">
+          <!--Start table of all tasks-->
+          <div id="display-all-tasks">
+            <table
+              id="table-of-all-tasks"
+              class="table table-striped table-dark"
+            >
+              <thead class="thead-dark">
+                <th>Id</th>
+                <th>Task name</th>
+                <th>Task Description</th>
+                <th id="priority-button">
+                  <a class="page-link" href="#">Priority</a>
+                </th>
+                <th>Edit task</th>
+                <th>Delete task</th>
+              </thead>
+              <tbody id="body-table"></tbody>
+            </table>
+          </div>
+          <!--end table of all tasks-->
+        </div>
+        <!--First section -- add new to-do -->
+        <div class="col-md-4">
+          <!--start input fields -->
+          <main id="main-section">
+            <input
+              type="text"
+              placeholder="Please add the task name"
+              id="add-task"
+              class="form-control form-control-lg"
+            />
+            <textarea
+              class="form-control"
+              id="taskDescription"
+              rows="12"
+              placeholder="Please add the task description"
+            ></textarea>
+            <select id="select-priority" class="form-control" required>
+              <option value="" disabled selected>
+                Select the task Priority
+              </option>
+              <option value="1">1 - High priority</option>
+              <option value="2">2 - medium priority</option>
+              <option value="3">3 - low priority</option>
+            </select>
+
+            <button type="button" class="btn btn-success" id="add-task-button">
+              Add
+            </button>
+          </main>
+          <!--end input fields  -->
+        </div>
+        <!--end of First section -- add new to-do -->
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
